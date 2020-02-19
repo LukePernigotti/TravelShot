@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, 'Myriad Pro', 'Open Sans', sans-serif;
+}
+
+/* common styles */
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+}
+p, ul {
+    font-size: 1.1rem;
+    margin-bottom: 1.1rem;
+}
+
+iframe {
+    border: 0;
+}
+
+
+button {
+    background-color: #92A3A2;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: #263643;
+}
+
+header h1 {
+    font-size: 2em;
+    color: #ffffff;
+    padding: 20px 0 20px 60px;
+    background: url('img/logo.png') no-repeat;
+    background-size: 50px;
+}
+
+.parallax {
+    background-image: url("img/banner-mob.jpg");
+    min-height: 700px; 
+    width: 100%;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* intro */
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 30px;
+    background-color: #263643;
+    color: #ffffff;
+}
+
+.intro aside {
+    position: relative;
+    bottom: -80px;
+    
+}
+.intro aside picture img {
+    width: 100%;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+
+/* how to play */
+.how-to-play {
+    margin-top: 40px;
+    padding: 30px 30px 0 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.how-to-play ul li{
+    list-style: none;
+}
+
+.how-to-play aside {
+    position: relative;
+    bottom: -25px;
+}
+
+.how-to-play aside img {
+    width: 100%;
+    max-width: 400px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+/* video section */
+.video-section {
+    background-color: #263643;
+    text-align: center;
+    padding: 30px;
+}
+
+.video-section h2 {
+    color: #ffffff;
+}
+
+.video-section iframe {
+    width: 80vw;
+    height: 43vw;
+}
+
+
+/* paralax planetario */
+.parallax-planetario {
+    background-image: url("img/planetario-mob.jpg");
+    min-height: 200px; 
+    width: 100%;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* last section*/
+.last-section {
+    text-align: center;
+    padding: 20px 0 50px 0;
+}
+
+.last-section img {
+    width: 100%;
+    display: block;
+    margin: auto;
+    max-width: 500px;
+}
+
+
+/* footer */
+footer {
+    background-color: #263643;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer ul {
+    margin-bottom: 0;
+}
+
+footer ul li {
+    margin-bottom: 5px;
+}
+
+
+/* tablet */
+@media screen and (min-width: 768px){
+    /* paralax */
+    .parallax {
+        background-image: url('img/banner-tab.jpg');
+    }
+    .parallax-planetario {
+        background-image: url('img/planetario-tab.jpg');
+    }
+
+    header h1 {
+        font-size: 3em;
+        padding: 20px 0 20px 90px;
+        background-size: auto;
+    }
+
+    /* intro */
+    .intro {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+    }
+
+    .intro article button {
+        margin-bottom: 50px;
+    }
+    
+    .intro article {
+        padding-right: 30px;
+    }
+    .intro aside {
+        position: relative;
+        bottom: -80px;
+    }
+    
+    /* how to play */
+    .how-to-play aside img {
+        width: 400px;
+    }
+
+    /* video section */
+    .video-section iframe {
+        width: 560px;
+        height: 315px;
+    }
+
+    /* last section */
+    .last-section img {
+        max-width: 1000px;
+    }
+    
+
+}
+
+
+/* desktop */
+@media screen and (min-width: 922px){
+    /* paralax */
+    .parallax {
+        background-image: url('img/banner-desk.jpg');
+    }
+    .parallax-planetario {
+        background-image: url('img/planetario-desk.jpg');
+    }
+
+    /* intro */
+    .intro aside picture img {
+        width: 500px;
+    }
+
+    /* how to play */
+    .how-to-play {
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        margin-right: 60px;
+    }
+
+    .how-to-play article {
+        text-align: left;
+        padding-top: 90px;
+        max-width: 480px;
+    }
+    
+    .how-to-play aside {
+        /* right: 120px; */
+        left: -3vw;
+        top: -100px;
+        margin-right: 5vw;
+    }
+
+    .how-to-play aside img{
+        width: 300px;
+    }
+}
